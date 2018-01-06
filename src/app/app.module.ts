@@ -3,6 +3,7 @@ import { NgModule,  NO_ERRORS_SCHEMA  } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http/';
+import { ParkingService } from './parking.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http/';
     HttpClientModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [ParkingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
