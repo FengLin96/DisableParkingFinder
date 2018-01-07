@@ -8,11 +8,16 @@ import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core'; 
 import { AgmDirectionModule } from 'agm-direction';
+import {RouterModule} from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { TodayComponent } from './today/today.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     MapComponent,
+    HomeComponent,
+    TodayComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,8 +25,7 @@ import { AgmDirectionModule } from 'agm-direction';
     HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBs8QbgcZgbfwUGe-MtHk36uiODTLwCSZg'
-    }),
-    AgmDirectionModule
+    })
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [ParkingService],
