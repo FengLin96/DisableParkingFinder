@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http/';
 import { ParkingService } from './parking.service';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
-
+import { AgmCoreModule } from '@agm/core'; 
+import { AgmDirectionModule } from 'agm-direction';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,10 @@ import { MapComponent } from './map/map.component';
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBs8QbgcZgbfwUGe-MtHk36uiODTLwCSZg'
+    }),
+    AgmDirectionModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [ParkingService],
