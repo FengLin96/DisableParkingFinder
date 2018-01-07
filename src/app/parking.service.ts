@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs/Observable';
-import "rxjs/add/operator/do";
 
 @Injectable()
 export class ParkingService {
@@ -12,8 +11,6 @@ export class ParkingService {
     return this._http.get<IData[]>("http://datasets.antwerpen.be/v4/gis/mindervalideparkings.json");
     //.do(data => { console.log(JSON.stringify(data)) });
   }
-  
-  
 }
 
 export interface IPaging {

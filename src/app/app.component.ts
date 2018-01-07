@@ -7,12 +7,9 @@ import { IParking, ParkingService, IData } from './parking.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  parkings:IData[];
-  constructor(private service:ParkingService){}
+  constructor(){}
   
   ngOnInit(){
-    this.service.Lijst.subscribe(result=>this.parkings = result);
-    console.log(this.parkings);
   }
 
   

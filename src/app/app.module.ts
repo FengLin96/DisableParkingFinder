@@ -4,14 +4,20 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http/';
 import { ParkingService } from './parking.service';
+import { ListComponent } from './list/list.component';
+import { MapComponent } from './map/map.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [ParkingService],

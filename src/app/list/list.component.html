@@ -1,0 +1,30 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Afstand</th>
+      <th>Adres</th>
+      <th>Aantal plaatsen</th>
+      <th>Kleur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let parking of datas.data">
+      <td></td>
+      <td>{{parking.adres}}</td>
+      <td>{{parking.aantal_plaatsen}}</td>
+      <td>{{parking.kleur}}</td>
+    </tr>
+    <!-- <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr> -->
+  </tbody>
+</table>
