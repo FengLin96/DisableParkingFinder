@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
-import { IParking, ParkingService, IData } from './parking.service';
+import { ParkingService } from './parking.service';
+import {IData,IParking} from './interfaces';
 
 @Component({
   selector: 'app-root',

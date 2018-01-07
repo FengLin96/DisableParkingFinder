@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ParkingService, IData } from '../parking.service';
+import { ParkingService } from '../parking.service';
 import { NgFor } from '@angular/common';
+import {IData,IParking} from '../interfaces';
 
 @Component({
   selector: 'app-list',
@@ -8,11 +9,17 @@ import { NgFor } from '@angular/common';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  datas: IData[]
-  constructor(private service:ParkingService) { }
+  datas: IData;
+  parkings:IParking[];
+  selectedParking:number;
+  constructor(private service:ParkingService) {this.selectedParking = 11;}
 
   ngOnInit() {
     this.service.Lijst.subscribe(result=>this.datas = result);
+    this.parkings = this.datas.parking;
   }
 
-}
+  public onSelect(id:number):void{
+     this.selectedParking = id;
+    }
+  }
